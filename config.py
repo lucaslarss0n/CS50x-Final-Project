@@ -1,9 +1,7 @@
+import os
+
 class Config(object):
-    DEBUG = False
-    DATABASE_URI = 'sqlite:///default.db'
-
-class DevelopmentConfig(Config):
-    DEBUG = True
-
-class ProductionConfig(Config):
-    DATABASE_URI = 'mysql://user@localhost/foo'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or \
+        'sqlite:///app.db'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False

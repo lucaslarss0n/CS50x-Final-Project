@@ -7,6 +7,17 @@
     <title>GradeGrind</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
+  <header>
+    <nav class="left-navbar">
+      <a href="/html/">HTML</a>
+      <a href="/css/">CSS</a>
+      <a href="/js/">JavaScript</a>
+      <a href="/python/">Python</a>
+    </nav>
+    <nav class="right-navbar">
+
+    </nav>
+  </header>
   <body>
     {% block content %}{% endblock %}
 	<script src="script.js"></script>

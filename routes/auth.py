@@ -1,6 +1,7 @@
 from flask import render_template, flash, redirect, url_for
 from app import app
-# import forms and models if needed
+# if i need to import models:
+# from app.models import User
 
 @app.route('/login')
 def login():

@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GradeGrind</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GradeGrind</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
   <header>
-    <nav class="logo">
-
-    </nav>
     <nav class="navbar">
-      <a href="/about.html">About</a>
-      <a href="/login.html">Login</a>
-      <a href="/register.html">Register</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
     </nav>
   </header>
-  <body>
-    {% block content %}{% endblock %}
-	<script src="script.js"></script>
-  </body>
+  {% block content %}{% endblock %}
+  <script src="script.js"></script>
+</body>
 </html>

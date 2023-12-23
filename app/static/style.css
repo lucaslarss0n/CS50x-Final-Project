@@ -5,6 +5,12 @@ body {
   padding: 25px;
 }
 
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 25x;
+}
+
 h1 {
   font-size:25px;
 }
@@ -15,11 +21,14 @@ h1 {
   text-align: center;
 }
 
-.left-navbar {
-  color:whitesmoke
+.navbar {
+  background-color: rgb(13, 16, 19);
+  border-radius: 20px;
+  padding: 10px;
 }
 
-a { 
+nav a { 
+  margin-left: 10px;
   color: inherit;
-  text-decoration: none; 
+  text-decoration: none;
 } 

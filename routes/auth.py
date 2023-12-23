@@ -5,10 +5,8 @@ from app import app
 
 @app.route('/login')
 def login():
-    form = # Your LoginForm
-    return render_template('auth/login.html', title='Sign In', form=form)
+    return render_template('auth/login.html', title='Sign In')
 
 @app.route('/register')
 def register():
-    form = # Your RegistrationForm
-    return render_template('auth/register.html', title='Register', form=form)
+    return render_template('auth/register.html', title='Register')

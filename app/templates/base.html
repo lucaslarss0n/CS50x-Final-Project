@@ -10,10 +10,10 @@
 <body>
   <header>
     <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
+      <a href="{{ url_for('tasks.index') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('auth.signin') }}">Sign in</a>
+      <a href="{{ url_for('auth.register') }}">Register</a>
     </nav>
   </header>
   {% block content %}{% endblock %}

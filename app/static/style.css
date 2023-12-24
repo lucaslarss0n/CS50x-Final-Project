@@ -23,7 +23,6 @@ header {
   background-color: black; /* Transparent background for the navbar */
   border-radius: 25px; /* Rounded corners for the navbar */
   padding: 5px; /* Padding inside the navbar */
-
   position: absolute; /* Position the navbar absolutely */
   top: 10px; /* Adjust the top distance as needed */
   right: 20px; /* Position to the right */
@@ -60,7 +59,7 @@ header {
   margin-top: 30px;
   background-color: var(--main);
   border-radius: 30px;
-  padding: 10px;
+  padding: 5px;
   color: black;
   font-size: large;
   font-weight: bold;

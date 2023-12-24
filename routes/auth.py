@@ -3,9 +3,9 @@ from app import app
 # if i need to import models:
 # from app.models import User
 
-@app.route('/login')
+@app.route('/signin')
 def login():
-    return render_template('auth/login.html', title='Sign In')
+    return render_template('auth/signin.html', title='Sign In')
 
 @app.route('/register')
 def register():

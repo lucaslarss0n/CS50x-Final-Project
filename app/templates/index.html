@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="startingpage-background">
-  <div class="startingpage">
-    <h1>Welcome to <span style="color:var(--main)"> GradeGrind</span>!</h1>
-    <p>A website that makes keeping track of school work easy and frictionless</p>
-    <button>Start grinding — it's free</button>
-  </div>
+<div class="startingpage">
+  <h1>Welcome to <span class="title-gra"> GradeGrind</span>!</h1>
+  <p>A website that makes keeping track of school work easy and frictionless</p>
+  <a href="{{ url_for('register') }}" class="button">Start grinding — it's free</a>
 </div>
 {% endblock %}

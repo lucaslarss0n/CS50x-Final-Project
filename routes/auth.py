@@ -4,9 +4,10 @@ from app import app
 # from app.models import User
 
 @app.route('/signin')
-def login():
-    return render_template('auth/signin.html', title='Sign In')
+def signin():
+    return render_template('signin.html', title='Sign In')
 
 @app.route('/register')
 def register():
-    return render_template('auth/register.html', title='Register')
+    return render_template('register.html', title='Register')
+

@@ -5,4 +5,4 @@ from app import app
 @app.route('/tasks')
 def tasks():
     # Logic to display tasks
-    return render_template('tasks/index.html')
+    return render_template('tasks.html')

@@ -15,18 +15,23 @@ body {
 
 header {
   position: relative; /* Make the header a positioned container */
-  padding: 0px; /* Remove padding for now */
-  background-color: transparent;
+  padding: 24px;
+  background-color: var(--background);
+}
+
+.startingpage p {
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .navbar {
-  background-color: black; /* Transparent background for the navbar */
-  border-radius: 25px; /* Rounded corners for the navbar */
-  padding: 5px; /* Padding inside the navbar */
-  position: absolute; /* Position the navbar absolutely */
-  top: 10px; /* Adjust the top distance as needed */
-  right: 20px; /* Position to the right */
-  z-index: 1; /* Ensure the navbar is above the content */
+  background-color: black; 
+  border-radius: 25px;
+  padding: 5px; 
+  position: absolute; 
+  top: 10px; 
+  right: 20px; 
 }
 
 .navbar a {
@@ -39,15 +44,6 @@ header {
   font-weight: bold;
 }
 
-.startingpage-background {
-  background-image: radial-gradient(circle at top, var(--background) 0%, black 100%);
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding: 0;
-}
-
 .startingpage {
   width: 700px;
   padding-top: 40px;
@@ -55,13 +51,29 @@ header {
   text-align: center;
 }
 
-.startingpage button {
-  margin-top: 30px;
-  background-color: var(--main);
-  border-radius: 30px;
-  padding: 5px;
-  color: black;
+.button {
+  background-color: black; 
+  border-radius: 25px;
+  padding: 5px; 
+  color: whitesmoke;
   font-size: large;
   font-weight: bold;
-  border-color: var(--main-lighter); /* Assuming you want a lighter border color */
+  text-decoration: none;
   border-style: solid;
+  outline: none; /* Remove outline */
+  margin-top: 50px;
+}
+
+.button:hover {
+  background-color: black;
+  border-color: whitesmoke;
+  color: whitesmoke;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White glow effect on hover */
+}
+
+.title-gradegrind {
+  font-size: xx-large; /* Adjust as needed */
+  font-weight: bold;
+  color: white; /* Light color for dark backgrounds */
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
+}

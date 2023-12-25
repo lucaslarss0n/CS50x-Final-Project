@@ -32,13 +32,21 @@ header {
   padding-bottom: 30px;
 }
 
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
 .navbar {
   background-color: black;
   font-size: small; 
   border-radius: 25px;
   padding: 5px; 
   position: absolute; 
-  top: 10px; 
+  top: 20px; 
   right: 20px; 
 }
 

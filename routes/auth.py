@@ -3,9 +3,9 @@ from app import app
 # if i need to import models:
 # from app.models import User
 
-@app.route('/signin', methods=['GET', 'POST'])
-def signin():
-    return render_template('signin.html', title='Sign In')
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return render_template('login.html', title='login')
 
 from flask import request, flash, redirect, url_for
 
@@ -23,7 +23,7 @@ def register():
             # Assuming User is your user model and it has a register method
             User.register(form_data['username'], password)
             flash('Registration successful. Please log in.', 'success')
-            return redirect(url_for('signin'))
+            return redirect(url_for('login'))
         else:
             flash('Passwords do not match. Please try again.', 'error')
 

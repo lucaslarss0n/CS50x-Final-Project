@@ -1,15 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="POST">
-    <h2>Register</h2>
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" value="{{ form_data.get('username', '') }}">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-    <label for="password_confirm">Confirm Password</label>
-    <input type="password" name="password_confirm" id="password_confirm">
-    <input type="submit" value="Register">
-    <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
-</form>
+<div class="form-container">
+    <form method="POST">
+        <h2>Register</h2>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" value="{{ form_data.get('username', '') }}">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+
+        <label for="password_confirm">Confirm Password</label>
+        <input type="password" name="password_confirm" id="password_confirm">
+        
+        <input type="submit" value="Register" class="button-register">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        <p style="text-align: center; font-size: 0.8em; opacity: 0.8;">Already a user? <a href="/login" style="color: white;">LOGIN</a></p>
+    </form>
+</div>
 {% endblock %}

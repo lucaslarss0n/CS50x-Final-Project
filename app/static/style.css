@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Inter';
+  font-size: 18px;
   background: var(--background);
   color: whitesmoke;
   margin: 0px;
@@ -19,14 +20,21 @@ header {
   background-color: var(--background);
 }
 
-.startingpage p {
-  font-size: 20px;
+.startingpage h1 {
+  font-size: xx-large;
   margin: 0px;
-  padding: 0px;
+  padding-bottom: 30px;
+}
+
+.startingpage p {
+  font-size: 18px;
+  margin: 0px;
+  padding-bottom: 30px;
 }
 
 .navbar {
-  background-color: black; 
+  background-color: black;
+  font-size: small; 
   border-radius: 25px;
   padding: 5px; 
   position: absolute; 
@@ -54,8 +62,9 @@ header {
 .button {
   background-color: black; 
   border-radius: 25px;
-  padding: 5px; 
+  padding: 5px 10px 5px 10px; 
   color: whitesmoke;
+  border: 0;
   font-size: large;
   font-weight: bold;
   text-decoration: none;

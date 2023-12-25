@@ -1,5 +1,6 @@
-from flask import render_template, flash, redirect, url_for
-from app import app
+from flask import render_template, flash, redirect, url_for, request
+from flask_login import login_user
+from app import app, db
 from app.models import User
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -26,8 +27,8 @@ def register():
     form_data = {}
     if request.method == 'POST':
         form_data['username'] = request.form.get('username')
-        password = request.form.get('password')
-        password_confirm = request.form.get('password_confirm')
+        form_data['password'] = request.form.get('password')
+        form_data['password_confirm'] = request.form.get('password_confirm')
 
         # Add your validation and registration logic here
 

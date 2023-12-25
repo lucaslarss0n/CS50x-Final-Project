@@ -1,8 +1,8 @@
 :root {
   --main: rgb(72, 163, 255);
   --main-lighter: hsl(199, 100%, 70%);
-  --background: rgb(16, 20, 24);
-  --background-darker: rgb(12, 15, 17);
+  --background: rgb(20, 25, 29);
+  --window: rgb(10, 10, 10);
 }
 
 body {
@@ -41,7 +41,7 @@ header {
 }
 
 .navbar {
-  background-color: black;
+  background-color: var(--window);
   font-size: small; 
   border-radius: 25px;
   padding: 5px; 
@@ -68,7 +68,7 @@ header {
 }
 
 .button {
-  background-color: black; 
+  background-color: var(--window); 
   border-radius: 25px;
   padding: 5px 14px 5px 14px; 
   color: whitesmoke;
@@ -82,7 +82,7 @@ header {
 }
 
 .button:hover {
-  background-color: black;
+  background-color: var(--window);
   border-color: whitesmoke;
   color: whitesmoke;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White glow effect on hover */
@@ -99,7 +99,7 @@ header {
 /*  REGISTER PAGE  */
 
 .form-container {
-  background-color: black;
+  background-color: var(--window);
   color: white;
   width: 300px;
   margin: 30px auto;
@@ -122,7 +122,7 @@ header {
   background-color: white; 
   border-radius: 25px;
   padding: 5px 14px 5px 14px; 
-  color: black;
+  color: var(--window);
   border: 0;
   font-size: medium;
   font-weight: bold;
@@ -133,7 +133,7 @@ header {
 
 .button-register:hover {
   background-color: white;
-  border-color: black;
-  color: black;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Black glow effect on hover */
+  border-color: var(--window);
+  color: var(--window);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* var(--window) glow effect on hover */
 }

@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="post">
-    <!-- Registration form fields -->
+<form method="POST">
+    <h2>Register</h2>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" value="{{ form_data.get('username', '') }}">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+    <label for="password_confirm">Confirm Password</label>
+    <input type="password" name="password_confirm" id="password_confirm">
+    <input type="submit" value="Register">
+    <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
 </form>
 {% endblock %}

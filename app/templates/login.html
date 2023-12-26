@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="form-container"></div>
-<form method="POST">
-    <h2>Login</h2>
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" value="{{ form_data.get('username', '') }}">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-    <input type="submit" value="Login" class="button-register">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <p style="text-align: center; font-size: 0.8em; opacity: 0.8;">Not a user? <a href="/register" style="color: white;">REGISTER</a></p>
-</form>
+<div class="form-container">
+    <form method="POST">
+        <h2>Login</h2>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" value="{{ form_data.get('username', '') }}">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Login" class="button-register">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <p style="text-align: center; font-size: 0.8em; opacity: 0.8;">Not a user? <a href="/register" style="color: white;">REGISTER</a></p>
+    </form>
+</div>
 {% endblock %}

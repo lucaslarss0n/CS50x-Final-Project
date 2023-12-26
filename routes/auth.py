@@ -19,7 +19,7 @@ def login():
 
         flash('Invalid username or password')
 
-    return render_template('login.html')
+    return render_template('login.html', form_data=form_data)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -55,7 +55,5 @@ def register():
             return redirect(url_for('login'))
         else:
             flash('Passwords do not match. Please try again.', 'error')
-        
-
     return render_template('register.html', title='Register', form_data=form_data)
 

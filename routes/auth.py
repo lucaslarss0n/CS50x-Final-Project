@@ -5,13 +5,14 @@ from app.models import User
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    form_data = {}
     if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
+        form_data['username'] = request.form.get('username')
+        form_data['password'] = request.form.get('password')
 
-        user = User.query.filter_by(username=username).first()
+        user = User.query.filter_by(username=form_data['username']).first()
 
-        if user and user.check_password(password):
+        if user and user.check_password(form_data['password']):
             # Log in the user and redirect to the home page
             login_user(user)
             return redirect(url_for('home'))
@@ -19,8 +20,6 @@ def login():
         flash('Invalid username or password')
 
     return render_template('login.html')
-
-from flask import request, flash, redirect, url_for
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -38,18 +37,18 @@ def register():
             return redirect(url_for('register'))
         
         # Password validation
-        if len(password) < 8:
+        if len(form_data['password']) < 8:
             flash('Password must be at least 8 characters.', 'error')
             return redirect(url_for('register'))
-        elif len(password) > 50:
+        elif len(form_data['password']) > 50:
             flash('Password must be less than 50 characters.', 'error')
             return redirect(url_for('register'))
 
         # If passwords match
-        if password == password_confirm:
+        if form_data['password'] == form_data['password_confirm']:
             # Create a new user
             new_user = User(username=form_data['username'])
-            new_user.set_password(password) 
+            new_user.set_password(form_data['password']) 
             db.session.add(new_user)  # Add new user to the database session
             db.session.commit()  # Commit the changes to the database
             flash('Registration successful. Please log in.', 'success')

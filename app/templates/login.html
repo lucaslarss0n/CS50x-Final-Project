@@ -10,7 +10,7 @@
         <input type="password" name="password" id="password">
         <input type="submit" value="Login" class="button-register">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-        <p style="text-align: center; font-size: 0.8em; opacity: 0.8;">Not a user? <a href="/register" style="color: white;">REGISTER</a></p>
+        <p style="text-align: center; font-size: 0.8em; opacity: 0.8;">Not a user? <a href="{{ url_for('auth_bp.register') }}" style="color: white;">REGISTER</a></p>
     </form>
 </div>
 {% endblock %}
